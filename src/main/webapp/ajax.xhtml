@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />    
+    <title>JSF Ajax Render</title>
+    <style type="text/css">
+    	#ajaxForm {
+		    margin: 18px;
+		}
+		.nameTextbox {
+		    margin-left: 12px;
+		}
+		#btn {
+		    padding: 12px 0px 0px 0px;
+		}
+		#output {
+			padding-top: 12px;
+		    color: green;
+		}
+    </style>
+</h:head>
+<h:body>
+    <center><h2>JSF Ajax Render Example</h2></center>
+    <h:form id="ajaxForm">       
+        <div id="input">
+        	 <h:outputLabel value="Enter Name:" /><h:inputText id="nameId" styleClass="nameTextbox" value="#{helloBean.name}" />
+        </div>
+        <div id="btn">
+            <h:commandButton value="Say Hello" styleClass="btn btn-primary btn-sm">
+                <f:ajax execute= "nameId" render="messageId" />
+            </h:commandButton>
+        </div>
+        <div id="output">
+            <h4><h:outputText id="messageId" value="#{helloBean.message}" /></h4>
+        </div>
+    </h:form>
+</h:body>
+</html>
