@@ -29,11 +29,18 @@
         <div id="btn">
             <h:commandButton value="Say Hello" styleClass="btn btn-primary btn-sm">
                 <f:ajax execute= "nameId" render="messageId" />
+<!--                <f:ajax render=":iframe-holder"/>-->
             </h:commandButton>
         </div>
         <div id="output">
             <h4><h:outputText id="messageId" value="#{helloBean.message}" /></h4>
         </div>
+        
+<!--        <h:panelGroup id="iframe-holder" layout="block">-->
+<!--		    <iframe width="560" height="315" src="#{helloBean.url}">-->
+<!--		        Iframes not supported-->
+<!--		    </iframe>-->
+<!--		</h:panelGroup>-->
     </h:form>
 </h:body>
 </html>

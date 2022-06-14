@@ -21,4 +21,9 @@ public class HelloBean {
         }
         return response;
     }
+	
+	public String getUrl() {
+//        return "https://www.google.ca&output=embed"; // refused to display set 'X-Frame-Options' to 'sameorigin'.
+		return "http://www.wenxuecity.com"; //ok
+    }
 }
